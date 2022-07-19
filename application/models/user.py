@@ -1,8 +1,4 @@
-from email.policy import default
 from .base import db
-
-from werkzeug.security import generate_password_hash
-
 
 
 class User(db.Model):
@@ -19,7 +15,7 @@ class User(db.Model):
     def __init__(self, username, email, password):
         self.username = username
         self.email = email
-        self.password = generate_password_hash(password)
+        self.password = password
 
 
  
